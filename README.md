@@ -1,4 +1,5 @@
-# Giantess-Queens
-Crusader Kings 3 giantess queeen mod
+The Giantess Queen mod is a project that anyone willing can contribute to in any capacity they can.
 
-This mod was made several years ago, and has since worked on by multiple modders. Anyone can take or modify the mod as they want, and any help is appreciated.
+i don't really think I have to expand on what the theme of the mod is.
+
+To access mod content either create a giantess character or activate mod content by using the 'meet a strange merchant' decision as an indipendent ruler.
