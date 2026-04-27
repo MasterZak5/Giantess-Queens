@@ -92,7 +92,24 @@
  giantess_demonized_name: "Giantess Demonized"
  giantess_shunned_name: "Giantess Shunned"
  giantess_worshipped_name: "Giantess Worshipped"
- 
+
+ doctrine_tiny_rights_name: "Tiny Rights"
+ doctrine_tiny_rights_toys_name: "Toys"
+ doctrine_tiny_rights_toys_desc: "Tinies are nothing but toys for giantesses. There is no reason to consider their feelings or rights."
+ doctrine_parameter_tiny_toys: "Tinies are not considered people with rights. This affects what events may fire."
+ doctrine_tiny_rights_full_rights_name: "Full Rights"
+ doctrine_tiny_rights_full_rights_desc: "Tinies are people deserving of rights as any person should be."
+ doctrine_parameter_tiny_full_rights: "Tinies are treated fairly. This affects what events may fire."
+ doctrine_tiny_rights_superior_name: "Superior"
+ doctrine_tiny_rights_superior_desc: "Giantesses may be larger, but they are just barbaric animals that rely on brute strength."
+ doctrine_parameter_tiny_superior: "Tinies are superior to giantesses. This affects what events may fire."
+
+ faith_must_be_allmother_tt: "Faith must be [GetReligion('allmother_worship_religion').GetName]"
+ doctrine_cant_be_tiny_toys_tt: "Cannot have [GetDoctrine('doctrine_tiny_rights_toys').GetName|U]"
+ doctrine_cant_be_tiny_superior_tt: "Cannot have [GetDoctrine('doctrine_tiny_rights_superior').GetName|U]"
+ doctrine_tiny_rights_superior_tt: "Cannot have [GetDoctrine('doctrine_giantess_acceptance_accepted').GetName|U] or [GetDoctrine('doctrine_giantess_acceptance_worshipped').GetName|U]"
+ doctrine_tiny_rights_toys_tt: "Cannot have [GetDoctrine('doctrine_giantess_acceptance_demonized').GetName|U] or [GetDoctrine('doctrine_giantess_acceptance_shunned').GetName|U]"
+
 # holy_site_<name>_name:0
 # holy_site_<name>_effect_name:0
 # holy_site_<name>_effects:0

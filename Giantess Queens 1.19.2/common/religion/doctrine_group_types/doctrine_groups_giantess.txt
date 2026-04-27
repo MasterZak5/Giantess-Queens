@@ -14,6 +14,16 @@ doctrine_giantess_acceptance = {
     }
 }
 
+doctrine_tiny_rights = {
+	category = "crimes"
+    
+    doctrine_types = {
+        doctrine_tiny_rights_toys
+        doctrine_tiny_rights_full_rights
+        doctrine_tiny_rights_superior
+    }
+}
+
 doctrine_giantess_tenets = {
 	category = "core_tenets"
 

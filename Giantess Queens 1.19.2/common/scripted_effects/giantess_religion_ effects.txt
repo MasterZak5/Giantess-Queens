@@ -12,3 +12,16 @@ giantess_acceptance_doctrine_assign_effect = {
         add_doctrine = doctrine_giantess_acceptance_demonized
 	}
 }
+
+tiny_rights_doctrine_assign_effect = {
+	if = {
+		limit = {
+			NOR = {
+				has_doctrine = doctrine_tiny_rights_toys
+				has_doctrine = doctrine_tiny_rights_full_rights
+				has_doctrine = doctrine_tiny_rights_superior
+			}
+		}
+        add_doctrine = doctrine_tiny_rights_full_rights
+	}
+}
