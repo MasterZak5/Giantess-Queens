@@ -735,6 +735,7 @@ giantess_religion.0012 = {
 		every_religion_global = {
 			every_faith = {
 				giantess_acceptance_doctrine_assign_effect = yes
+				tiny_rights_doctrine_assign_effect = yes
 			}
 		}
 	}
