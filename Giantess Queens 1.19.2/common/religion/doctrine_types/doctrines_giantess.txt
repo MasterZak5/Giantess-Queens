@@ -1,9 +1,17 @@
 ﻿########################################
 #   Giantess Acceptance Doctrines       
-#   Updated to 1.19 by Banan
+#   By Banan | Updated to 1.19
 ########################################
 
 doctrine_giantess_acceptance_demonized = {
+    can_pick = {
+        custom_description = {
+            text = doctrine_cant_be_tiny_toys_tt # change
+            NOT = { 
+                doctrine:doctrine_tiny_rights_toys = { is_in_list = selected_doctrines }
+            }
+        }
+    }
     piety_cost = {
         value = faith_doctrine_cost_low
         if = {
@@ -11,13 +19,22 @@ doctrine_giantess_acceptance_demonized = {
             multiply = faith_unchanged_doctrine_cost_mult
         }
         else_if = {
-            limit = { has_doctrine = doctrine_giantess_acceptance_accepted }
+            limit = { has_doctrine = doctrine_giantess_acceptance_shunned }
             multiply = faith_changed_doctrine_cost_mult_two_step
          }
         else_if = {
-            limit = { has_doctrine = doctrine_giantess_acceptance_worshipped }
+            limit = { has_doctrine = doctrine_giantess_acceptance_accepted }
             multiply = faith_changed_doctrine_cost_mult_four_step
         }
+        else_if = {
+            limit = { has_doctrine = doctrine_giantess_acceptance_worshipped }
+            multiply = faith_changed_doctrine_cost_mult_four_step
+            multiply = faith_changed_doctrine_cost_mult_two_step
+        }
+        # Round up to the nearest multiple of 25
+		divide = 25
+		ceiling = yes
+		multiply = 25
     }
     traits = {
         sins = { giantess }
@@ -27,16 +44,36 @@ doctrine_giantess_acceptance_demonized = {
     }
 }
 doctrine_giantess_acceptance_shunned = {
+    can_pick = {
+        custom_description = {
+            text = doctrine_cant_be_tiny_toys_tt # change
+            NOT = { 
+                doctrine:doctrine_tiny_rights_toys = { is_in_list = selected_doctrines }
+            }
+        }
+    }
     piety_cost = {
         value = faith_doctrine_cost_low
         if = {
-            limit = { has_doctrine = _acceptance }
+            limit = { has_doctrine = doctrine_giantess_acceptance_shunned }
             multiply = faith_unchanged_doctrine_cost_mult
         }
         else_if = {
-            limit = { has_doctrine = doctrine_giantess_acceptance_worshipped }
+            limit = { has_doctrine = doctrine_giantess_acceptance_demonized }
             multiply = faith_changed_doctrine_cost_mult_two_step
         }
+        else_if = {
+            limit = { has_doctrine = doctrine_giantess_acceptance_accepted }
+            multiply = faith_changed_doctrine_cost_mult_two_step
+        }
+        else_if = {
+            limit = { has_doctrine = doctrine_giantess_acceptance_worshipped }
+            multiply = faith_changed_doctrine_cost_mult_four_step
+        }
+        # Round up to the nearest multiple of 25
+		divide = 25
+		ceiling = yes
+		multiply = 25
     }
     parameters = {
         giantess_shunned = yes
@@ -51,8 +88,20 @@ doctrine_giantess_acceptance_accepted = {
         }
         else_if = {
             limit = { has_doctrine = doctrine_giantess_acceptance_demonized }
+            multiply = faith_changed_doctrine_cost_mult_four_step
+        }
+        else_if = {
+            limit = { has_doctrine = doctrine_giantess_acceptance_shunned }
             multiply = faith_changed_doctrine_cost_mult_two_step
         }
+        else_if = {
+            limit = { has_doctrine = doctrine_giantess_acceptance_worshipped }
+            multiply = faith_changed_doctrine_cost_mult_two_step
+        }
+        # Round up to the nearest multiple of 25
+		divide = 25
+		ceiling = yes
+		multiply = 25
     }
     parameters = {
         giantess_accepted = yes
@@ -61,11 +110,12 @@ doctrine_giantess_acceptance_accepted = {
 doctrine_giantess_acceptance_worshipped = {
     can_pick = {
         custom_tooltip = {
-            text = doctrine_allmother_tt
-            custom_tooltip = {
-                text = faith_must_be_allmother_tt
-                religion = religion:allmother_worship_religion
-            }
+            text = faith_must_be_allmother_tt
+            religion = religion:allmother_worship_religion
+        }
+        custom_tooltip = {
+            text = doctrine_cant_be_tiny_superior_tt
+            NOT = { doctrine:doctrine_tiny_rights_superior = { is_in_list = selected_doctrines } }
         }
     }
     piety_cost = {
@@ -75,18 +125,133 @@ doctrine_giantess_acceptance_worshipped = {
             multiply = faith_unchanged_doctrine_cost_mult
         }
         else_if = {
-            limit = { has_doctrine = _acceptance }
+            limit = { has_doctrine = doctrine_giantess_acceptance_demonized }
+            multiply = faith_changed_doctrine_cost_mult_four_step
             multiply = faith_changed_doctrine_cost_mult_two_step
         }
         else_if = {
-            limit = { has_doctrine = doctrine_giantess_acceptance_demonized }
+            limit = { has_doctrine = doctrine_giantess_acceptance_shunned }
             multiply = faith_changed_doctrine_cost_mult_four_step
         }
+        else_if = {
+            limit = { has_doctrine = doctrine_giantess_acceptance_accepted }
+            multiply = faith_changed_doctrine_cost_mult_two_step
+        }
+        # Round up to the nearest multiple of 25
+		divide = 25
+		ceiling = yes
+		multiply = 25
     }
     traits = {
         virtues = { giantess giantess_sex_slave }
     }
     parameters = {
         giantess_worshipped = yes
+    }
+}
+
+##############################################################
+#   Tiny Rights Doctrines
+#   By Banan
+##############################################################
+
+doctrine_tiny_rights_toys = {
+    can_pick = {
+        custom_tooltip = {
+            text = doctrine_tiny_rights_toys_tt # change
+            NOT = { 
+                OR = {
+                    doctrine:doctrine_giantess_acceptance_demonized = { is_in_list = selected_doctrines } 
+                    doctrine:doctrine_giantess_acceptance_shunned = { is_in_list = selected_doctrines } 
+                }
+            }
+        }
+    }
+    piety_cost = {
+        value = faith_tenet_cost_massive
+        if = {
+            limit = { has_doctrine = doctrine_tiny_rights_toys }
+            multiply = faith_unchanged_doctrine_cost_mult
+        }
+        else_if = {
+            limit = { has_doctrine = doctrine_tiny_rights_full_rights }
+            multiply = faith_changed_doctrine_cost_mult_two_step
+        }
+        else_if = {
+            limit = { has_doctrine = doctrine_tiny_rights_superior }
+            multiply = faith_changed_doctrine_cost_mult_four_step
+        }
+        # Round up to the nearest multiple of 25
+		divide = 25
+		ceiling = yes
+		multiply = 25
+    }
+    traits = {
+        virtues = { giantess giantess_sex_slave }
+    }
+    parameters = {
+        tiny_toys = yes
+    }
+}
+doctrine_tiny_rights_full_rights = {
+    piety_cost = {
+        value = faith_tenet_cost_massive
+        if = {
+            limit = { has_doctrine = doctrine_tiny_rights_full_rights }
+            multiply = faith_unchanged_doctrine_cost_mult
+        }
+        else_if = {
+            limit = { has_doctrine = doctrine_tiny_rights_toys }
+            multiply = faith_changed_doctrine_cost_mult_two_step
+        }
+        else_if = {
+            limit = { has_doctrine = doctrine_tiny_rights_superior }
+            multiply = faith_changed_doctrine_cost_mult_two_step
+        }
+        # Round up to the nearest multiple of 25
+		divide = 25
+		ceiling = yes
+		multiply = 25
+    }
+    parameters = {
+        tiny_full_rights = yes
+    }
+}
+doctrine_tiny_rights_superior = {
+    can_pick = {
+        custom_tooltip = {
+            text = doctrine_tiny_rights_superior_tt # change
+            NOT = {
+                OR = {
+                    doctrine:doctrine_giantess_acceptance_accepted = { is_in_list = selected_doctrines } 
+                    doctrine:doctrine_giantess_acceptance_worshipped = { is_in_list = selected_doctrines } 
+                }
+            }
+        }
+    }
+    piety_cost = {
+        value = faith_tenet_cost_massive
+        if = {
+            limit = { has_doctrine = doctrine_tiny_rights_superior }
+            multiply = faith_unchanged_doctrine_cost_mult
+        }
+        else_if = {
+            limit = { has_doctrine = doctrine_tiny_rights_full_rights }
+            multiply = faith_changed_doctrine_cost_mult_two_step
+        }
+        else_if = {
+            limit = { has_doctrine = doctrine_tiny_rights_toys }
+            multiply = faith_changed_doctrine_cost_mult_four_step
+        }
+        # Round up to the nearest multiple of 25
+		divide = 25
+		ceiling = yes
+		multiply = 25
+    }
+    traits = {
+        sins = { giantess giantess_sex_slave }
+    }
+    parameters = {
+        tiny_superior = yes
     }
 }
