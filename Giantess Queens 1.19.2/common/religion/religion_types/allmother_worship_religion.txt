@@ -38,6 +38,7 @@ allmother_worship_religion = {
     doctrine = doctrine_deviancy_accepted
     doctrine = doctrine_witchcraft_accepted
     doctrine = doctrine_giantess_acceptance_worshipped
+    doctrine = doctrine_tiny_rights_full_rights
 
     ##############################################################
     # CLERICAL
@@ -286,6 +287,8 @@ allmother_worship_religion = {
             doctrine = tenet_macrosuprematism
             doctrine = tenet_ancestor_worship
             doctrine = tenet_sanctity_of_nature
+
+            doctrine = doctrine_tiny_rights_toys
         }
 
         ##############################################################
@@ -341,6 +344,8 @@ allmother_worship_religion = {
 				fallback_doctrine = tenet_human_sacrifice
 			}
             doctrine = tenet_jotuns
+
+            doctrine = doctrine_tiny_rights_toys
         }
     }
 }
