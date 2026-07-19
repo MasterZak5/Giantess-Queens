@@ -121,52 +121,52 @@ giantess_go_to_the_temple = {
 # Show My Skill (Giantess)
 ##############################
 
-giantess_show_my_skill = {
-    picture = {
-        reference= "gfx/interface/illustrations/decisions/decision_misc.dds"
-    }
-
-    ai_check_interval = 0
-    desc = giantess_show_my_skill_desc
-
-    is_shown = {
-        has_trait = giantess
-        is_ai = no
-    }
-
-    effect = {
-        trigger_event = giantess_skill.0001
-    }
-
-    ai_potential = { always = no }
-    ai_will_do = { base = 0 }
-}
+#giantess_show_my_skill = {
+#    picture = {
+#        reference= "gfx/interface/illustrations/decisions/decision_misc.dds"
+#    }
+#
+#    ai_check_interval = 0
+#    desc = giantess_show_my_skill_desc
+#
+#    is_shown = {
+#        has_trait = giantess
+#        is_ai = no
+#    }
+#
+#    effect = {
+#        trigger_event = giantess_skill.0001
+#    }
+#
+#    ai_potential = { always = no }
+#    ai_will_do = { base = 0 }
+#}
 
 ##############################
 # Show My Skill (Tiny Character)
 ##############################
 
-tiny_show_my_skill = {
-    picture = {
-        reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
-    }
-
-    ai_check_interval = 0
-    desc = tiny_show_my_skill_desc
-
-    is_shown = {
-        NOT = { has_trait = giantess }
-        has_variable = skill_specialization
-        is_ai = no
-    }
-
-    effect = {
-        trigger_event = giantess_skill.0010
-    }
-
-    ai_potential = { always = no }
-    ai_will_do = { base = 0 }
-}
+#tiny_show_my_skill = {
+#    picture = {
+#        reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+#    }
+#
+#    ai_check_interval = 0
+#    desc = tiny_show_my_skill_desc
+#
+#    is_shown = {
+#        NOT = { has_trait = giantess }
+#        has_variable = skill_specialization
+#        is_ai = no
+#    }
+#
+#    effect = {
+#        trigger_event = giantess_skill.0010
+#    }
+#
+#    ai_potential = { always = no }
+#    ai_will_do = { base = 0 }
+#}
 
 ##############################
 # Create Slave Army

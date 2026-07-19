@@ -71,49 +71,15 @@ giantess_reward_or_punish.0004 = {
 		ai_chance = {
 			base = 1
 			modifier = {
-				scope:actor.var:skill_specialization = flag:ass_specialization
+				scope:actor = {
+					has_character_modifier = ass_preference
+				}
 				add = 20
 			}
 			modifier = {
-				scope:recipient.var:skill_specialization = flag:ass_specialization
-				add = 20
-			}
-		}
-	}
-	#Vore
-	option = {
-		name = giantess_reward_or_punish.0004.desc.b
-		save_scope_value_as = {
-			name = training_type
-			value = flag:vore_training
-		}
-		ai_chance = {
-			base = 1
-			modifier = {
-				scope:actor.var:skill_specialization = flag:vore_specialization
-				add = 20
-			}
-			modifier = {
-				scope:recipient.var:skill_specialization = flag:vore_specialization
-				add = 20
-			}
-		}
-	}
-	#Boobs
-	option = {
-		name = giantess_reward_or_punish.0004.desc.c
-		save_scope_value_as = {
-			name = training_type
-			value = flag:boobs_training
-		}
-		ai_chance = {
-			base = 1
-			modifier = {
-				scope:actor.var:skill_specialization = flag:boobs_specialization
-				add = 20
-			}
-			modifier = {
-				scope:recipient.var:skill_specialization = flag:boobs_specialization
+				scope:recipient = {
+					has_character_modifier = ass_preference
+				}
 				add = 20
 			}
 		}
@@ -128,11 +94,61 @@ giantess_reward_or_punish.0004 = {
 		ai_chance = {
 			base = 1
 			modifier = {
-				scope:actor.var:skill_specialization = flag:foot_specialization
+				scope:actor = {
+					has_character_modifier = feet_preference
+				}
 				add = 20
 			}
 			modifier = {
-				scope:recipient.var:skill_specialization = flag:foot_specialization
+				scope:recipient = {
+					has_character_modifier = feet_preference
+				}
+				add = 20
+			}
+		}
+	}
+	#Vore
+	option = {
+		name = giantess_reward_or_punish.0004.desc.b
+		save_scope_value_as = {
+			name = training_type
+			value = flag:vore_training
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				scope:actor = {
+					has_character_modifier = vore_preference
+				}
+				add = 20
+			}
+			modifier = {
+				scope:recipient = {
+					has_character_modifier = vore_preference
+				}
+				add = 20
+			}
+		}
+	}
+	#Boobs
+	option = {
+		name = giantess_reward_or_punish.0004.desc.c
+		save_scope_value_as = {
+			name = training_type
+			value = flag:boobs_training
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				scope:actor = {
+					has_character_modifier = boobs_preference
+				}
+				add = 20
+			}
+			modifier = {
+				scope:recipient = {
+					has_character_modifier = boobs_preference
+				}
 				add = 20
 			}
 		}
@@ -147,11 +163,15 @@ giantess_reward_or_punish.0004 = {
 		ai_chance = {
 			base = 1
 			modifier = {
-				scope:actor.var:skill_specialization = flag:vagina_specialization
+				scope:actor = {
+					has_character_modifier = vagina_preference
+				}
 				add = 20
 			}
 			modifier = {
-				scope:recipient.var:skill_specialization = flag:vagina_specialization
+				scope:recipient = {
+					has_character_modifier = vagina_preference
+				}
 				add = 20
 			}
 		}

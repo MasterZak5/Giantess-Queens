@@ -64,7 +64,16 @@ tiny_sex.0004 = {
 			#Success
 			70 = {
 				modifier = {
-					add = scope:tiny.var:ass_skill
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value >= 100} }
+					add = 100
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value > 66} }
+					add = 66
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value > 33} }
+					add = 33
 				}
 				scope:giantess = {
 					add_character_flag = {
@@ -90,13 +99,33 @@ tiny_sex.0004 = {
 			60 = {
 				scope:giantess = {
 					trigger_event = giantess_sex.4
-				}
+				}				
 				modifier = {
-					add = scope:tiny.var:ass_skill
-				}
-				modifier = {
+					scope:giantess = { has_trait_xp = { trait = lifestyle_giantess track = vagina value >= 100} }
 					scope:giantess.var:alignment = flag:gentle
-					add = scope:giantess.var:ass_skill
+					add = 100
+				}
+				modifier = {
+					scope:giantess = { has_trait_xp = { trait = lifestyle_giantess track = vagina value > 66} }
+					scope:giantess.var:alignment = flag:gentle
+					add = 66
+				}
+				modifier = {
+					scope:giantess = { has_trait_xp = { trait = lifestyle_giantess track = vagina value > 33} }
+					scope:giantess.var:alignment = flag:gentle
+					add = 33
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value >= 100} }
+					add = 100
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value > 66} }
+					add = 66
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value > 33} }
+					add = 33
 				}
 				custom_tooltip = tiny_sex.0004.a.noinjury
 			}
@@ -166,7 +195,16 @@ tiny_sex.0004 = {
 			#Success
 			50 = {
 				modifier = {
-					add = scope:tiny.var:ass_skill
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value >= 100} }
+					add = 100
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value > 66} }
+					add = 66
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value > 33} }
+					add = 33
 				}
 				scope:giantess = {
 					add_character_flag = {
@@ -189,13 +227,33 @@ tiny_sex.0004 = {
 		}
 		random_list = {
 			#No injury
-			70 = {
+			70 = {				
 				modifier = {
-					add = scope:tiny.var:ass_skill
+					scope:giantess = { has_trait_xp = { trait = lifestyle_giantess track = vagina value >= 100} }
+					scope:giantess.var:alignment = flag:gentle
+					add = 100
 				}
 				modifier = {
+					scope:giantess = { has_trait_xp = { trait = lifestyle_giantess track = vagina value > 66} }
 					scope:giantess.var:alignment = flag:gentle
-					add = scope:giantess.var:ass_skill
+					add = 66
+				}
+				modifier = {
+					scope:giantess = { has_trait_xp = { trait = lifestyle_giantess track = vagina value > 33} }
+					scope:giantess.var:alignment = flag:gentle
+					add = 33
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value >= 100} }
+					add = 100
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value > 66} }
+					add = 66
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value > 33} }
+					add = 33
 				}
 				scope:giantess = {
 					trigger_event = giantess_sex.4

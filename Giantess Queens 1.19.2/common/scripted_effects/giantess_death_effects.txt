@@ -8,10 +8,7 @@ giantess_death_effect = {
     $GIANTESS$ = { save_scope_as = giantess }
 
     # Add trait for first time
-    if = {
-        limit = { scope:giantess = { NOT = { has_trait = lifestyle_giantess } } }
-        scope:giantess = { add_trait = lifestyle_giantess }
-    }
+    scope:giantess = { add_lifestyle_giantess = yes }
 
     ##############################################################
     # ASS — AWARE

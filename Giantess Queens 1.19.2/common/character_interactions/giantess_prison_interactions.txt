@@ -240,11 +240,9 @@ giantess_torture_interaction = {
 	is_shown = {
 		scope:recipient = {
 			is_imprisoned_by = scope:actor
-		}
-		scope:recipient = {
 			age >= 18
 			NOT = { has_trait = giantess }
-			is_vassal_of = scope:actor
+			# is_vassal_of = scope:actor	# Disabled because it looks like a pointless restriction
 		}
 		scope:actor = {
 			age >= 16
@@ -285,9 +283,6 @@ giantess_torture_interaction = {
 		}
 
 		scope:actor = {
-			giantess_mana_change = {
-				CHANGE = miniscule_mana_gain
-			}
 			stress_impact = {
 				base = minor_stress_impact_loss
 			}
@@ -295,14 +290,6 @@ giantess_torture_interaction = {
 
 		# EVENTS
 		hidden_effect = {
-			scope:recipient = {
-				if = {
-					limit = {
-						NOT = { has_variable = ass_skill }
-					}
-					init_tiny_skills = yes
-				}
-			}
 			scope:actor = {
 				trigger_event = giantess_torture.0001
 			}

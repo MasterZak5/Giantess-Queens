@@ -6,7 +6,6 @@ make_giantess_effect = {
     remove_trait = dwarf
     remove_trait = giant
     add_trait = giantess
-    init_giantess_skills = yes
 }
 
 ##############################################################
@@ -65,27 +64,27 @@ tiny_loyalty_change = {
 }
 
 ##############################################################
-# GIANTESS MANA CHANGE
+# CHECK FOR GIANTESS LIFESTYLE
 ##############################################################
 
-giantess_mana_change = {
-
-    custom_description = {
-        text  = giantess_mana_change_desc
-        value = $CHANGE$
-    }
-
+add_lifestyle_giantess = {
     if = {
-        limit = { NOT = { has_variable = giantess_mana } }
-        set_variable = {
-            name  = giantess_mana
-            value = $CHANGE$
+        limit = { 
+            NOT = { has_trait = lifestyle_giantess }
         }
+        add_trait = lifestyle_giantess
     }
-    else = {
-        change_variable = {
-            name = giantess_mana
-            add  = $CHANGE$
+}
+
+##############################################################
+# CHECK FOR TINY LIFESTYLE
+##############################################################
+
+add_lifestyle_tiny = {
+    if = {
+        limit = { 
+            NOT = { has_trait = lifestyle_tiny } 
         }
+        add_trait = lifestyle_tiny
     }
 }

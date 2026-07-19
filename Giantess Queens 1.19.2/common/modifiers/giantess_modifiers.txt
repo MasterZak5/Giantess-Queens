@@ -42,3 +42,24 @@ giantess_refused_unbirth = {
 recently_unbirthed = {
     icon = fertility_positive
 }
+
+##############################################################
+# SKILL PREFERENCE MODIFIERS
+##############################################################
+# No innate function. Effect is determined by the presence of these modifiers.
+
+ass_preference = {
+    icon = county_modifier_opinion_positive
+}
+feet_preference = {
+    icon = county_modifier_opinion_positive
+}
+vore_preference = {
+    icon = county_modifier_opinion_positive
+}
+boobs_preference = {
+    icon = county_modifier_opinion_positive
+}
+vagina_preference = {
+    icon = county_modifier_opinion_positive
+}

@@ -162,14 +162,6 @@ giantess_ask_sex = {
 	}
 
 	on_accept = {
-		hidden_effect = {
-			scope:recipient = {
-				if = {
-					limit = { NOT = { has_variable = ass_skill } }
-					init_tiny_skills = yes
-				}
-			}
-		}
 		scope:actor = {
 			add_opinion = {
 				target = scope:recipient
@@ -288,75 +280,6 @@ giantess_ask_sex = {
 			scope:hook = yes
 			add = -1
 		}
-	}
-}
-
-###############################################
-
-show_giantess_information_interaction = {
-	category = interaction_category_friendly
-	common_interaction = yes
-	interface_priority = 100
-	desc = show_giantess_information_interaction_desc
-
-	auto_accept = yes
-	use_diplomatic_range = no
-	ignores_pending_interaction_block = yes
-
-	is_shown = {
-		scope:actor = { is_ai = no }
-		scope:recipient = {
-			has_trait = giantess
-			has_variable = skill_specialization
-		}
-	}
-
-	on_auto_accept = {
-		scope:actor = {
-			trigger_event = giantess_skill.0008
-		}
-	}
-
-	ai_will_do = {
-		base = 0
-	}
-}
-
-###############################################
-
-show_tiny_information_interaction = {
-	category = interaction_category_friendly
-	common_interaction = yes
-	interface_priority = 100
-	desc = show_tiny_information_interaction_desc
-
-	auto_accept = yes
-	use_diplomatic_range = no
-	ignores_pending_interaction_block = yes
-
-	is_shown = {
-		scope:actor = { is_ai = no }
-		scope:recipient = {
-			NOT = { has_trait = giantess }
-		}
-	}
-
-	on_auto_accept = {
-		hidden_effect = {
-			scope:recipient = {
-				if = {
-					limit = { NOT = { has_variable = ass_skill } }
-					init_tiny_skills = yes
-				}
-			}
-		}
-		scope:actor = {
-			trigger_event = giantess_skill.0009
-		}
-	}
-
-	ai_will_do = {
-		base = 0
 	}
 }
 

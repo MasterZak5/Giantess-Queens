@@ -174,16 +174,6 @@ giantess_random.0003 = {
 			save_scope_as = tiny
 		}
 		save_scope_as = giantess
-		scope:tiny = {
-			if = {
-				limit = {
-					NOT = {
-						has_variable = vagina_skill
-					}
-				}
-				init_tiny_skills = yes
-			}
-		}
 	}
 	#Have sex
 	option = {
@@ -192,12 +182,28 @@ giantess_random.0003 = {
 			#Win
 			60 = {
 				modifier = {
-					scope:giantess = { has_variable = vagina_skill }
-					add = scope:giantess.var:vagina_skill
+					scope:giantess = { has_trait_xp = { trait = lifestyle_giantess track = vagina value >= 100} }
+					add = 100
 				}
 				modifier = {
-					scope:tiny = { has_variable = vagina_skill }
-					add = scope:tiny.var:vagina_skill
+					scope:giantess = { has_trait_xp = { trait = lifestyle_giantess track = vagina value > 66} }
+					add = 66
+				}
+				modifier = {
+					scope:giantess = { has_trait_xp = { trait = lifestyle_giantess track = vagina value > 33} }
+					add = 33
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value >= 100} }
+					add = 100
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value > 66} }
+					add = 66
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value > 33} }
+					add = 33
 				}
 				save_scope_value_as = {
 					name = sex_status
@@ -207,18 +213,28 @@ giantess_random.0003 = {
 			#Fail
 			100 = {
 				modifier = {
-					scope:giantess = { has_variable = vagina_skill }
-					add = {
-						value = scope:giantess.var:vagina_skill
-						multiply = -1
-					}
+					scope:giantess = { has_trait_xp = { trait = lifestyle_giantess track = vagina value >= 100} }
+					add = -100
 				}
 				modifier = {
-					scope:tiny = { has_variable = vagina_skill }
-					add = {
-						value = scope:tiny.var:vagina_skill
-						multiply = -1
-					}
+					scope:giantess = { has_trait_xp = { trait = lifestyle_giantess track = vagina value > 66} }
+					add = -66
+				}
+				modifier = {
+					scope:giantess = { has_trait_xp = { trait = lifestyle_giantess track = vagina value > 33} }
+					add = -33
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value >= 100} }
+					add = -100
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value > 66} }
+					add = -66
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vagina value > 33} }
+					add = -33
 				}
 				save_scope_value_as = {
 					name = sex_status

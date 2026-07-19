@@ -21,9 +21,14 @@ giantess_torture_recipient_effect = {
             value = 1
         }
 
+        # confirm has Tiny Skill trait
+        scope:recipient = { add_lifestyle_tiny = yes }
+
         ##############################################################
         # BUTTCRUSH
         ##############################################################
+
+        # These if statements are broken. Defaults to the first, not sure why yet.
 
         if = {
             limit = { scope:torture_method = flag:buttcrush }
@@ -31,12 +36,36 @@ giantess_torture_recipient_effect = {
             change_variable = {
                 name = stress_change
                 multiply = {
-                    value    = scope:actor.var:ass_skill
-                    subtract = scope:recipient.var:ass_skill
+                    if = {
+                        limit = { has_trait_xp = { trait = lifestyle_tiny track = tiny_ass value >= 100 } }
+                        value = 100
+                    }
+                    else_if = {
+                        limit = { has_trait_xp = { trait = lifestyle_tiny track = tiny_ass value > 66 } }
+                        value = 66
+                    }
+                    else_if = {
+                        limit = { has_trait_xp = { trait = lifestyle_tiny track = tiny_ass value > 33 } }
+                        value = 33
+                    }
+                    scope:actor = {
+                        if = {
+                            limit = { has_trait_xp = { trait = lifestyle_giantess track = ass value >= 100 } }
+                            add = -100
+                        }
+                        else_if = {
+                            limit = { has_trait_xp = { trait = lifestyle_giantess track = ass value > 66 } }
+                            add = -66
+                        }
+                        else_if = {
+                            limit = { has_trait_xp = { trait = lifestyle_giantess track = ass value > 33 } }
+                            add = -33
+                        }
+                    }
+                    min = 10
                 }
             }
-
-            add_ass_xp = { CHANGE = medium_xp_gain }
+            add_trait_xp = { trait = lifestyle_tiny track = tiny_ass value = 5 }
         }
 
         ##############################################################
@@ -49,12 +78,36 @@ giantess_torture_recipient_effect = {
             change_variable = {
                 name = stress_change
                 multiply = {
-                    value    = scope:actor.var:foot_skill
-                    subtract = scope:recipient.var:foot_skill
+                    if = {
+                        limit = { has_trait_xp = { trait = lifestyle_tiny track = tiny_feet value >= 100 } }
+                        value = 100
+                    }
+                    else_if = {
+                        limit = { has_trait_xp = { trait = lifestyle_tiny track = tiny_feet value > 66 } }
+                        value = 66
+                    }
+                    else_if = {
+                        limit = { has_trait_xp = { trait = lifestyle_tiny track = tiny_feet value > 33 } }
+                        value = 33
+                    }
+                    scope:actor = {
+                        if = {
+                            limit = { has_trait_xp = { trait = lifestyle_giantess track = feet value >= 100 } }
+                            add = -100
+                        }
+                        else_if = {
+                            limit = { has_trait_xp = { trait = lifestyle_giantess track = feet value > 66 } }
+                            add = -66
+                        }
+                        else_if = {
+                            limit = { has_trait_xp = { trait = lifestyle_giantess track = feet value > 33 } }
+                            add = -33
+                        }
+                    }
+                    min = 10
                 }
             }
-
-            add_foot_xp = { CHANGE = medium_xp_gain }
+            add_trait_xp = { trait = lifestyle_tiny track = tiny_feet value = 5 }
         }
 
         ##############################################################
@@ -67,12 +120,36 @@ giantess_torture_recipient_effect = {
             change_variable = {
                 name = stress_change
                 multiply = {
-                    value    = scope:actor.var:vore_skill
-                    subtract = scope:recipient.var:vore_skill
+                    if = {
+                        limit = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vore value >= 100 } }
+                        value = 100
+                    }
+                    else_if = {
+                        limit = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vore value > 66 } }
+                        value = 66
+                    }
+                    else_if = {
+                        limit = { has_trait_xp = { trait = lifestyle_tiny track = tiny_vore value > 33 } }
+                        value = 33
+                    }
+                    scope:actor = {
+                        if = {
+                            limit = { has_trait_xp = { trait = lifestyle_giantess track = vore value >= 100 } }
+                            add = -100
+                        }
+                        else_if = {
+                            limit = { has_trait_xp = { trait = lifestyle_giantess track = vore value > 66 } }
+                            add = -66
+                        }
+                        else_if = {
+                            limit = { has_trait_xp = { trait = lifestyle_giantess track = vore value > 33 } }
+                            add = -33
+                        }
+                    }
+                    min = 10
                 }
             }
-
-            add_vore_xp = { CHANGE = medium_xp_gain }
+            add_trait_xp = { trait = lifestyle_tiny track = tiny_vore value = 5 }
         }
 
         ##############################################################
@@ -85,12 +162,36 @@ giantess_torture_recipient_effect = {
             change_variable = {
                 name = stress_change
                 multiply = {
-                    value    = scope:actor.var:boobs_skill
-                    subtract = scope:recipient.var:boobs_skill
+                    if = {
+                        limit = { has_trait_xp = { trait = lifestyle_tiny track = tiny_boobs value >= 100 } }
+                        value = 100
+                    }
+                    else_if = {
+                        limit = { has_trait_xp = { trait = lifestyle_tiny track = tiny_boobs value > 66 } }
+                        value = 66
+                    }
+                    else_if = {
+                        limit = { has_trait_xp = { trait = lifestyle_tiny track = tiny_boobs value > 33 } }
+                        value = 33
+                    }
+                    scope:actor = {
+                        if = {
+                            limit = { has_trait_xp = { trait = lifestyle_giantess track = boobs value >= 100 } }
+                            add = -100
+                        }
+                        else_if = {
+                            limit = { has_trait_xp = { trait = lifestyle_giantess track = boobs value > 66 } }
+                            add = -66
+                        }
+                        else_if = {
+                            limit = { has_trait_xp = { trait = lifestyle_giantess track = boobs value > 33 } }
+                            add = -33
+                        }
+                    }
+                    min = 10
                 }
             }
-
-            add_boobs_xp = { CHANGE = medium_xp_gain }
+            add_trait_xp = { trait = lifestyle_tiny track = tiny_boobs value = 5 }
         }
 
         ##############################################################

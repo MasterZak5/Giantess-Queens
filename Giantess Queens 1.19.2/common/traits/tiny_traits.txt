@@ -132,3 +132,119 @@ tiny_slave = {
         }
     }
 }
+
+
+##############################################################
+# TINY LIFESTYLE TIERS
+##############################################################
+
+lifestyle_tiny = {
+    category = lifestyle
+
+    shown_in_ruler_designer = no
+
+    desc = {
+        first_valid = {
+            triggered_desc = {
+                trigger = { NOT = { exists = this } }
+                desc = trait_lifestyle_tiny_desc
+            }
+            desc = trait_lifestyle_tiny_character_desc
+        }
+    }
+
+    tracks = {
+        tiny_ass = {
+            33 = {
+                attraction_opinion = 5
+                monthly_piety = 0.10                
+                prowess = 1
+            }
+            66 = {
+                attraction_opinion = 5
+                monthly_piety = 0.15
+                prowess = 2
+            }
+            100 = {
+                attraction_opinion = 5
+                monthly_piety = 0.25
+                prowess = 3
+            }
+        }
+        tiny_feet = {
+            33 = {
+                attraction_opinion = 5
+                monthly_piety = 0.10                
+                prowess = 1
+                martial = 1
+            }
+            66 = {
+                attraction_opinion = 5
+                monthly_piety = 0.15
+                prowess = 1
+                martial = 1
+            }
+            100 = {
+                attraction_opinion = 5
+                monthly_piety = 0.25
+                prowess = 1
+                martial = 1
+            }
+        }
+        tiny_vore = {
+            33 = {
+                attraction_opinion = 5
+                monthly_piety = 0.10
+                prowess = 1
+            }
+            66 = {
+                attraction_opinion = 5
+                monthly_piety = 0.15
+                prowess = 2
+            }
+            100 = {
+                attraction_opinion = 5
+                monthly_piety = 0.25
+                prowess = 3
+            }
+        }
+        tiny_boobs = {
+            33 = {
+                attraction_opinion = 5
+                monthly_piety = 0.10
+                prowess = 1
+            }
+            66 = {
+                attraction_opinion = 5
+                monthly_piety = 0.15
+                prowess = 2
+            }
+            100 = {
+                attraction_opinion = 5
+                monthly_piety = 0.25
+                prowess = 3
+            }
+        }
+        tiny_vagina = {
+            33 = {
+                attraction_opinion = 5
+                monthly_piety = 0.10
+                intrigue = 1
+                prowess = 1
+            }
+            66 = {
+                attraction_opinion = 5
+                monthly_piety = 0.15
+                intrigue = 1
+                prowess = 1
+            }
+            100 = {
+                attraction_opinion = 5
+                monthly_piety = 0.25
+                intrigue = 1
+                prowess = 1
+            }
+        }
+    }
+}
+

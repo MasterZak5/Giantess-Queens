@@ -43,24 +43,12 @@ giantess_sex.0002 = {
 			base = 25
 			modifier = {
 				add = 50
-				has_variable = skill_specialization
-				trigger_if = {
-					limit = {
-						has_variable = skill_specialization
-					}
-					var:skill_specialization = flag:ass_specialization
-				}
+				has_character_modifier = ass_preference
 			}
 			modifier = {
 				add = 50
 				scope:tiny = {
-					has_variable = skill_specialization
-					trigger_if = {
-						limit = {
-							has_variable = skill_specialization
-						}
-						var:skill_specialization = flag:ass_specialization
-					}
+					has_character_modifier = ass_preference
 				}
 			}
 		}
@@ -75,24 +63,12 @@ giantess_sex.0002 = {
 			base = 25
 			modifier = {
 				add = 50
-				has_variable = skill_specialization
-				trigger_if = {
-					limit = {
-						has_variable = skill_specialization
-					}
-					var:skill_specialization = flag:boobs_specialization
-				}
+				has_character_modifier = boobs_preference
 			}
 			modifier = {
 				add = 50
 				scope:tiny = {
-					has_variable = skill_specialization
-					trigger_if = {
-						limit = {
-							has_variable = skill_specialization
-						}
-						var:skill_specialization = flag:boobs_specialization
-					}
+					has_character_modifier = boobs_preference
 				}
 			}
 		}
@@ -357,7 +333,7 @@ giantess_sex.0005 = {
 		name = giantess_sex.0005.desc.a
 		random_list = {
 			#Success
-			120 = {
+			140 = {
 				custom_tooltip = giantess_sex.0005.desc.a.success
 				save_scope_value_as = {
 					name = sex_status
@@ -365,14 +341,19 @@ giantess_sex.0005 = {
 				}
 			}
 			#Fail
-			80 = {
+			100 = {
 				custom_tooltip = giantess_sex.0005.desc.a.fail
 				modifier = {
-					always = yes
-					add = {
-						value = scope:tiny.var:boobs_skill
-						multiply = -1
-					}
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_boobs value >= 100} }
+					add = 100
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_boobs value > 66} }
+					add = 66
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_boobs value > 33} }
+					add = 33
 				}
 				save_scope_value_as = {
 					name = sex_status
@@ -393,7 +374,7 @@ giantess_sex.0005 = {
 		name = giantess_sex.0005.desc.b #readded option b
 		random_list = {
 			#Success/survive
-			140 = {
+			120 = {
 				custom_tooltip = giantess_sex.0005.desc.b.success
 				save_scope_value_as = {
 					name = sex_status
@@ -401,14 +382,19 @@ giantess_sex.0005 = {
 				}
 			}
 			#Success/death
-			120 = {
+			100 = {
 				custom_tooltip = giantess_sex.0005.desc.b.fail
 				modifier = {
-					always = yes
-					add = {
-						value = scope:tiny.var:boobs_skill
-						multiply = -1
-					}
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_boobs value >= 100} }
+					add = -100
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_boobs value > 66} }
+					add = -66
+				}
+				modifier = {
+					scope:tiny = { has_trait_xp = { trait = lifestyle_tiny track = tiny_boobs value > 33} }
+					add = -33
 				}
 				save_scope_value_as = {
 					name = sex_status

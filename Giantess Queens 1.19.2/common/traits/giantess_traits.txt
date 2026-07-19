@@ -98,7 +98,7 @@ lifestyle_giantess = {
                 martial = 1
             }
         }
-        vore = {
+        feet = {
             33 = {
                 dread_baseline_add = 10
                 monthly_prestige = 0.10
@@ -114,7 +114,7 @@ lifestyle_giantess = {
                 martial = 1
             }
         }
-        feet = {
+        vore = {
             33 = {
                 dread_baseline_add = 10
                 monthly_prestige = 0.10
@@ -150,17 +150,18 @@ lifestyle_giantess = {
             33 = {
                 dread_baseline_add = 10
                 monthly_prestige = 0.10
-                fertility = 0.05
+                attraction_opinion = 5
             }
             66 = {
                 dread_baseline_add = 10
                 monthly_prestige = 0.15
-                fertility = 0.10
+                attraction_opinion = 10
+
             }
             100 = {
                 dread_baseline_add = 10
                 monthly_prestige = 0.25
-                fertility = 0.15
+                attraction_opinion = 15
             }
         }
     }

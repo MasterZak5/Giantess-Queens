@@ -31,21 +31,20 @@ giantess_torture.0001 = {
 		ai_chance = {
 			base = 10
 			modifier = {
-				add = 20
-				var:ass_skill >= 25
+				scope:actor = { has_trait_xp = { trait = lifestyle_giantess track = ass value >= 100 } }
+				add = 100
 			}
 			modifier = {
-				add = 20
-				var:ass_skill >= 50
+				scope:actor = { has_trait_xp = { trait = lifestyle_giantess track = ass value > 66 } }
+				add = 66
 			}
 			modifier = {
-				add = 20
-				var:ass_skill >= 75
+				scope:actor = { has_trait_xp = { trait = lifestyle_giantess track = ass value > 33 } }
+				add = 33
 			}
 		}
-		add_ass_xp = {
-			CHANGE = miniscule_xp_gain
-		}
+		add_lifestyle_giantess = yes
+		add_trait_xp = { trait = lifestyle_giantess track = ass value = 5 }
 		save_scope_value_as = {
 			name = torture_method
 			value = flag:buttcrush
@@ -58,51 +57,23 @@ giantess_torture.0001 = {
 		ai_chance = {
 			base = 10
 			modifier = {
-				add = 20
-				var:foot_skill >= 25
+				scope:actor = { has_trait_xp = { trait = lifestyle_giantess track = feet value >= 100 } }
+				add = 100
 			}
 			modifier = {
-				add = 20
-				var:foot_skill >= 50
+				scope:actor = { has_trait_xp = { trait = lifestyle_giantess track = feet value > 66 } }
+				add = 66
 			}
 			modifier = {
-				add = 20
-				var:foot_skill >= 75
+				scope:actor = { has_trait_xp = { trait = lifestyle_giantess track = feet value > 33 } }
+				add = 33
 			}
 		}
-		add_foot_xp = {
-			CHANGE = miniscule_xp_gain
-		}
+		add_lifestyle_giantess = yes
+		add_trait_xp = { trait = lifestyle_giantess track = feet value = 5 }
 		save_scope_value_as = {
 			name = torture_method
 			value = flag:footcrush
-		}
-		trigger_event = giantess_torture.0002
-	}
-	#Boobs
-	option = {
-		name = giantess_torture.0001.desc.c
-		ai_chance = {
-			base = 10
-			modifier = {
-				add = 20
-				var:boobs_skill >= 25
-			}
-			modifier = {
-				add = 20
-				var:boobs_skill >= 50
-			}
-			modifier = {
-				add = 20
-				var:boobs_skill >= 75
-			}
-		}
-		add_boobs_xp = {
-			CHANGE = miniscule_xp_gain
-		}
-		save_scope_value_as = {
-			name = torture_method
-			value = flag:boobsquish
 		}
 		trigger_event = giantess_torture.0002
 	}
@@ -112,24 +83,49 @@ giantess_torture.0001 = {
 		ai_chance = {
 			base = 10
 			modifier = {
-				add = 20
-				var:vore_skill >= 25
+				scope:actor = { has_trait_xp = { trait = lifestyle_giantess track = vore value >= 100 } }
+				add = 100
 			}
 			modifier = {
-				add = 20
-				var:vore_skill >= 50
+				scope:actor = { has_trait_xp = { trait = lifestyle_giantess track = vore value > 66 } }
+				add = 66
 			}
 			modifier = {
-				add = 20
-				var:vore_skill >= 75
+				scope:actor = { has_trait_xp = { trait = lifestyle_giantess track = vore value > 33 } }
+				add = 33
 			}
 		}
-		add_vore_xp = {
-			CHANGE = miniscule_xp_gain
-		}
+		add_lifestyle_giantess = yes
+		add_trait_xp = { trait = lifestyle_giantess track = vore value = 5 }
 		save_scope_value_as = {
 			name = torture_method
 			value = flag:kiss
+		}
+		trigger_event = giantess_torture.0002
+	}
+	#Boobs
+	option = {
+		name = giantess_torture.0001.desc.c
+		ai_chance = {
+			base = 10
+			modifier = {
+				scope:actor = { has_trait_xp = { trait = lifestyle_giantess track = boobs value >= 100 } }
+				add = 100
+			}
+			modifier = {
+				scope:actor = { has_trait_xp = { trait = lifestyle_giantess track = boobs value > 66 } }
+				add = 66
+			}
+			modifier = {
+				scope:actor = { has_trait_xp = { trait = lifestyle_giantess track = boobs value > 33 } }
+				add = 33
+			}
+		}
+		add_lifestyle_giantess = yes
+		add_trait_xp = { trait = lifestyle_giantess track = boobs value = 5 }
+		save_scope_value_as = {
+			name = torture_method
+			value = flag:boobsquish
 		}
 		trigger_event = giantess_torture.0002
 	}
@@ -139,21 +135,20 @@ giantess_torture.0001 = {
 		ai_chance = {
 			base = 10
 			modifier = {
-				add = 20
-				var:vagina_skill >= 25
+				scope:actor = { has_trait_xp = { trait = lifestyle_giantess track = vagina value >= 100 } }
+				add = 100
 			}
 			modifier = {
-				add = 20
-				var:vagina_skill >= 50
+				scope:actor = { has_trait_xp = { trait = lifestyle_giantess track = vagina value > 66 } }
+				add = 66
 			}
 			modifier = {
-				add = 20
-				var:vagina_skill >= 75
+				scope:actor = { has_trait_xp = { trait = lifestyle_giantess track = vagina value > 33 } }
+				add = 33
 			}
 		}
-		add_vagina_xp = {
-			CHANGE = miniscule_xp_gain
-		}
+		add_lifestyle_giantess = yes
+		add_trait_xp = { trait = lifestyle_giantess track = vagina value = 5 }
 		save_scope_value_as = {
 			name = torture_method
 			value = flag:vagina

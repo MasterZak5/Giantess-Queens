@@ -1,11 +1,5 @@
 ﻿l_german:
 
- giantess_skill.0001.t:0 "Meine Statistiken"
- giantess_skill.0001.desc.opening.gentle:0 "Ich bin eine sanfte Riesin."
- giantess_skill.0001.desc.opening.evil:0 "Ich bin eine böse Riesin."
- giantess_skill.0001.desc.opening.neutral:0 "Ich bin eine neutrale Riesin."
- giantess_skill.0001.desc:0 "Ich spezialisiere mich in [ROOT.Char.Custom('GiantessPreference')]. Meine Blutkraft ist [ROOT.Var('giantess_blood_power').GetValue]. \n\nArsch-Fähigkeit — [ROOT.Var('ass_skill').GetValue]. Fuß-Fähigkeit — [ROOT.Var('foot_skill').GetValue]. Vore-Fähigkeit — [ROOT.Var('vore_skill').GetValue]. Brüste-Fähigkeit — [ROOT.Var('boobs_skill').GetValue]. Vagina-Fähigkeit — [ROOT.Var('vagina_skill').GetValue].\n\nIch habe [ROOT.Var('giantess_mana').GetValue] Mana-Punkte. Ich habe [ROOT.Var('slaves_number').GetValue] Sklaven."
- giantess_skill.0001.a:0 "OK"
  giantess_skill.0003.t:0 "Meine Spezialisierung wählen"
  giantess_skill.0003.desc:0 "Ich bin jetzt eine erwachsene Riesin und kann meine Spezialisierung wählen. Ich werde 25 Bonuspunkte für diese Fähigkeit erhalten und jeder wird wissen, dass dies meine stärkste und beliebteste Fähigkeit ist."
  giantess_skill.0003.a:0 "Ich werde die Kunst des Arsches studieren!"
@@ -36,7 +30,6 @@
  giantess_skill.0008.desc:0 "[recipient.Custom('GiantessDescription')]"
  giantess_skill.0008.desc.a:0 "Interessant"
  giantess_skill.0009.desc:0 "[recipient.Custom('TinyDescription')]"
- giantess_skill.0010.desc:0 "Ich spezialisiere mich in [ROOT.Char.Custom('GiantessPreference')].\n\nArsch-Fähigkeit — [ROOT.Var('ass_skill').GetValue]. Fuß-Fähigkeit — [ROOT.Var('foot_skill').GetValue]. Vore-Fähigkeit — [ROOT.Var('vore_skill').GetValue]. Brüste-Fähigkeit — [ROOT.Var('boobs_skill').GetValue]. Vagina-Fähigkeit — [ROOT.Var('vagina_skill').GetValue].\n\nIch habe [ROOT.Var('tiny_loyaty').GetValue] Treuheits-Punkte."
  giantess_skill.0011.t:0 "Meine Ausrichtung wählen"
  giantess_skill.0011.desc:0 "Es ist Zeit für mich, zu entscheiden, welchen Weg ich als Riesin einschlagen werde. Sanfte Riesinnen nutzen ihre Körperteile, um Winzlinge zu bezaubern und sie süchtig nach ihrer Schönheit zu machen. Sie erlangen Lust und Mana, indem sie die Wünsche der Winzlinge befriedigen. Böse Riesinnen hingegen nutzen ihre Größe, um Winzlinge zur Unterwerfung zu zwingen. Sie erlangen Lust und Mana, indem sie Winzlinge Schmerzen zufügen."
  giantess_skill.0011.desc.a:0 "Ich werde den Wegen der sanften Riesinnen folgen"
